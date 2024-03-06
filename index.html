@@ -1,17 +1,315 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Totally Legit Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-size: 16px; font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.centerfig {
+  text-align: center;
+}
+ .circle-image {
+    border-radius: 50%; /* Makes the image round */
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    object-fit: cover; /* Ensures the image covers the space without stretching */
+  }
+
+.image-container {
+
+    display: flex; /* This will lay out the child elements (your images) in a row */
+ /* This centers the images horizontally in the container */
+justify-content: center;
+    align-items: center; /* This centers the images vertically in the container */
+  }
+
+
+.container {
+        display: flex; /* Use flexbox to lay out children side by side */
+	justify-content: center;
+        align-items: center; /* Align items at the start of the cross axis */
+    }
+    .text {
+        margin-left: 20px; /* Space between the image and the text */
+    }
+    figure {
+        margin: 0; /* Remove default margin from the figure element */
+    }
+
+.container > div {
+        flex: 1; /* Each child div will take equal space */
+
+        max-width: 50vw; /* Maximum width for each child div */
+    }
+
+.container img {
+        max-width: 100%; /* Make image responsive within its container */
+	
+        height: auto; /* Maintain aspect ratio */
+    }
+
+@media (max-width: 768px) {
+        .container > div {
+            max-width: 80vw; /* Adjust max-width for smaller screens */
+        }
+
+
+.containerright {
+        display: flex; /* Use flexbox to lay out children side by side */
+	justify-content: center;
+        align-items: center; /* Align items at the start of the cross axis */
+    }
+    .text {
+        margin-right: 20px; /* Space between the image and the text */
+    }
+    figure {
+        margin: 0; /* Remove default margin from the figure element */
+    }
+
+.containerright > div {
+        flex: 1; /* Each child div will take equal space */
+
+        max-width: 50vw; /* Maximum width for each child div */
+    }
+
+.containerright img {
+        max-width: 100%; /* Make image responsive within its container */
+	
+        height: auto; /* Maintain aspect ratio */
+    }
+
+@media (max-width: 768px) {
+        .container > div {
+            max-width: 80vw; /* Adjust max-width for smaller screens */
+        }
+
+
+
+</style>
+
+
 </head>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Simulate click on the 'About Me' button
+    document.querySelector('.tablinks').click();
+});
+</script>
 <body>
 
-<h1>Totally Legit Website of All Cinnamon Roll Reviews</h1>
-<h2>Kaylyn Cinnamon Rolls Review</h2>
-<p>9/10 pretty good overall would eat again</p>
-<h2>Jacob Cinnamon Rolls Review</h2>
-<p>10000000/10 best darn thing i have ever had! would eat again for the rest of my life</p>
 
-<h2>Overall Winner</h2>
-<p>Jacob Cinnamon Rolls are the  best in the world and cant be beat! </p>
+<div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
+    <button class="tablinks" onclick="openCity(event, 'Research')">Research</button>
+    <button class="tablinks" onclick="openCity(event, 'Projects')">Projects</button>
+    <button class="tablinks" onclick="openCity(event, 'Links')">Links</button>
+</div>
+
+
+
+<div id="About Me" class="tabcontent">
+	<div class="centerfig">
+  	<img src = "/Users/jacobmantooth/Desktop/websitesicons/face.jpg" class="circle-image">
+	</div>
+<p> Hello, my name is Jacob Mantooth. I hail from Tijuana, Mexico, and later moved to Oklahoma. There, I pursued my education at East Central University, earning degrees in Physics and Mathematics, alongside minors in Computer Science and Chemistry. My time at university ignited a fervent passion for research and the pursuit of new knowledge.</p>
+
+<p> Currently, I am a first-year ACSM PhD student at the University of Notre Dame, under the mentorship of Dr. Lindsay. Our research is focused on the numerical simulation of cellular diffusion, investigating diffusion patterns both on circular and square domains, with an emphasis on predefined paths. My previous projects have spanned a variety of fields including Deep Learning, Reinforcement Learning, Operations Research, and experimental Physics. In terms of technical skills, I am proficient in several programming languages, including Python, R, C++, and Matlab. Beyond my academic and professional endeavors.</p>
+
+<p>In addition to my academic and professional endeavors, I find immense solace and rejuvenation amidst the natural beauty of the great outdoors. To maintain a balanced and healthy lifestyle, I prioritize staying active through regular workouts, which serve as a cornerstone for both my physical and mental well-being. Moreover, I channel my creativity and technical skills into coding projects that are driven by my personal passions and interests. These projects are not just outlets for technical exploration but also a means to solve real-world problems, innovate, and contribute to the communities that I care about. </p>
+<p>
+
+
+<div class="container">
+   <div style="text-align: center;">
+       <img src="/Users/jacobmantooth/Desktop/websitesicons/domiandirectionmmfpt.png" >
+    	<p>Domian Direction MFPT</p>
+     </div>
+    <div class="text":>
+<ul>
+    <li> Radial Directional Guidance effects on diffusions on a circle and square domain</li>
+</ul> 
+     
+          
+ 
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="text":>
+        <ul>
+    <li> Explore Three Reinforcement Learning cases: continuous, single-discrete, and multi-discrete building a game for each</li>
+    <li> Compared Four Different Reinforcement methods on each case</li>
+</ul> 
+    </div>
+
+<div style="text-align: center;">
+       <img src="/Users/jacobmantooth/Desktop/websitesicons/DoubleQtableper1000MSvE.png" >
+    	<p>Domian Direction MFPT</p>
+     </div>
+</div>
+
+
+
+<div class="container">
+    <div style="text-align: center;">
+    <video autoplay loop style="width: 100%;">
+      <source src="/Users/jacobmantooth/Desktop/websitesicons/mtcarweb.mp4" type="video/mp4">
+    </video>
+    <p> RL vs OC on the Continuous Mountain Car Problem V0</p>
+  </div>
+<div class="text">
+ <ul>
+    <li> Using the Hamilton-Jacobi-Bellman (HJB) equation to train an approximating neural network for the value function </li>
+    <li>Investigated the trade-off between data-driven RL methods and model-driven optimal control methods on the continuous mountain car problem</li>
+    <li> Compared three methods in solving the continuous mountain car problem </li>
+
+</ul> 
+    </div>
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+
+<div id="Links" class="tabcontent">
+  <p>If you would like to contact me, please use any of the following links:</p>
+
+  <a href="https://github.com/jacmantooth" target="_blank">
+    <img src="/Users/jacobmantooth/Desktop/websitesicons/githubicon.png" alt="GitHub" style="width: 80px; height: 80px;"></a>
+
+<!-- Closing tag for the GitHub link -->
+  <a href="https://www.linkedin.com/in/jacob-mantooth-7b262321b/" target="_blank">
+    <img src="/Users/jacobmantooth/Desktop/websitesicons/linkedin.png" alt="LinkedIn" style="width: 80px; height: 80px;"></a>
+
+<a href="mailto:jmantoot@nd.edu" target="_blank"> <!-- Corrected mailto link -->
+    <img src="/Users/jacobmantooth/Desktop/websitesicons/emailicon2.png" alt="Email" style="width: 80px; height: 80px;"></a>
+
+</div>
+
+
+
+<div id="Projects" class="tabcontent">
+  <p>Past and Present Coding Projects</p>
+  <p> languages that I have used in the past include: C++, Python, R, Matlab, HTML, Mathematica, Git, and PKL.<p>
+<p> Battle Ship using reinforcement learning<p> 
+<p> Designing/Building a web site that breaks down covid cases by states<p>
+<p> Comparing RL to OC Methods on the Continuous Mountain Car Problem<p>
+<p> MINST imagine recognition<p>
+</div>
+
+
+
+
+
+<div id="Research" class="tabcontent">
+  <p>Past and Present Research Projects. My current research interest have been looking at the intersection between mathematics and biology. While some of my past research interest has been but not limited to Exploring Deep Learning, Reinforcement Learning, Physics and Operation Research. For more information on my research click here  <a href="/Users/jacobmantooth/Desktop/websitesicons/Jacob_CVweb.pdf" download>Download link</a>  </p>
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>2023 - Present </h2>
+        <p> radial directional guidance effects on diffusions on a circle and square domain </p>
+	<p> Finite Element Research  </p>
+    </div>
+  </div>
+
+ <div class="container right">
+    <div class="content">
+      <h2>2022 - 2023 </h2>
+        <p> Understanding Reinforcement Learning Through Games</p>
+	<p> Generalizing the Boltzmann Equations </p>
+	<p>Comparing RL to OC Methods on the Continuous Mountain Car Problem</p>
+    </div>
+  </div>
+
+<div class="container left">
+    <div class="content">
+      <h2>2021 - 2022 </h2>
+        <p>Mathematics of Deep Learning, and SVD</p>
+	<p>Temperatures Affects on Ultra Sonic Waves </p>
+	<p>Comparing RL to OC Methods on the Continuous Mountain Car Problem</p>
+    </div>
+  </div>
+
+<div class="container right">
+    <div class="content">
+      <h2>2020 - 2021 </h2>
+       <p>Covid-19 and Travel </p>
+	<p>Operation Research </p>
+	
+    </div>
+  </div>
+
+<div class="container left">
+    <div class="content">
+      <h2>Class Projects </h2>
+      <p>Applied PDE Project </p>
+       <p>Numerical Analysis II  Project</p>
+       <p>PDE Schroedinger Project  </p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
 </body>
-</html>
+</html> 
