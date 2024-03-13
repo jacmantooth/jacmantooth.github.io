@@ -1,10 +1,16 @@
-
 <!DOCTYPE html>
 <html>
 <head>
+
+<style>
+    ul li { margin-bottom: 10px; }
+</style>
+
+
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {font-size: 16px; font-family: Arial;}
+body {font-size: 16px; font-family: 'verdana';}
 
 /* Style the tab */
 .tab {
@@ -23,6 +29,7 @@ body {font-size: 16px; font-family: Arial;}
   padding: 14px 16px;
   transition: 0.3s;
   font-size: 17px;
+  font-family: 'verdana';
 }
 
 /* Change background color of buttons on hover */
@@ -59,6 +66,8 @@ body {font-size: 16px; font-family: Arial;}
 justify-content: center;
     align-items: center; /* This centers the images vertically in the container */
   }
+
+
 
 
 .container {
@@ -120,6 +129,24 @@ justify-content: center;
             max-width: 80vw; /* Adjust max-width for smaller screens */
         }
 
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
 
 
 </style>
@@ -132,6 +159,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.tablinks').click();
 });
 </script>
+
+
 <body>
 
 
@@ -146,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div id="About Me" class="tabcontent">
 	<div class="centerfig">
-  	<img src = "https://github.com/jacmantooth/jacmantooth.github.io/blob/871a001984a6fa19c4e03aaeb236a7c1ee605577/Iconsweb/face.jpg" class="circle-image">
+  	<img src = "/Users/jacobmantooth/Desktop/websitesicons/face.jpg" class="circle-image">
 	</div>
 <p> Hello, my name is Jacob Mantooth. I hail from Tijuana, Mexico, and later moved to Oklahoma. There, I pursued my education at East Central University, earning degrees in Physics and Mathematics, alongside minors in Computer Science and Chemistry. My time at university ignited a fervent passion for research and the pursuit of new knowledge.</p>
 
@@ -158,7 +187,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="container">
    <div style="text-align: center;">
-       <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/28f7247ad286f595b1c0a7b14ae9dbeb248cfbbe/Iconsweb/domiandirectionmmfpt.png" >
+       <img src="/Users/jacobmantooth/Desktop/websitesicons/domiandirectionmmfpt.png" >
     	<p>Domian Direction MFPT</p>
      </div>
     <div class="text":>
@@ -181,8 +210,8 @@ document.addEventListener('DOMContentLoaded', function() {
     </div>
 
 <div style="text-align: center;">
-       <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/28f7247ad286f595b1c0a7b14ae9dbeb248cfbbe/Iconsweb/DoubleQtableper1000MSvE%20copy.png" >
-    	<p>Domian Direction MFPT</p>
+       <img src="/Users/jacobmantooth/Desktop/websitesicons/DoubleQtableper1000MSvE.png" >
+    	<p>RL on Battleship</p>
      </div>
 </div>
 
@@ -191,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="container">
     <div style="text-align: center;">
     <video autoplay loop style="width: 100%;">
-      <source src="https://github.com/jacmantooth/jacmantooth.github.io/blob/28f7247ad286f595b1c0a7b14ae9dbeb248cfbbe/Iconsweb/mtcarweb%20copy.mp4" type="video/mp4">
+      <source src="/Users/jacobmantooth/Desktop/websitesicons/mtcarweb.mp4" type="video/mp4">
     </video>
     <p> RL vs OC on the Continuous Mountain Car Problem V0</p>
   </div>
@@ -246,53 +275,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <div id="Research" class="tabcontent">
-  <p>Past and Present Research Projects. My current research interest have been looking at the intersection between mathematics and biology. While some of my past research interest has been but not limited to Exploring Deep Learning, Reinforcement Learning, Physics and Operation Research. For more information on my research click here  <a href="/Users/jacobmantooth/Desktop/websitesicons/Jacob_CVweb.pdf" download>Download link</a>  </p>
-<div class="timeline">
-  <div class="container left">
-    <div class="content">
-      <h2>2023 - Present </h2>
-        <p> radial directional guidance effects on diffusions on a circle and square domain </p>
-	<p> Finite Element Research  </p>
-    </div>
-  </div>
 
- <div class="container right">
-    <div class="content">
-      <h2>2022 - 2023 </h2>
-        <p> Understanding Reinforcement Learning Through Games</p>
-	<p> Generalizing the Boltzmann Equations </p>
-	<p>Comparing RL to OC Methods on the Continuous Mountain Car Problem</p>
-    </div>
-  </div>
+<H1>Current and Previous Research Endeavors</H1>
 
-<div class="container left">
-    <div class="content">
-      <h2>2021 - 2022 </h2>
-        <p>Mathematics of Deep Learning, and SVD</p>
-	<p>Temperatures Affects on Ultra Sonic Waves </p>
-	<p>Comparing RL to OC Methods on the Continuous Mountain Car Problem</p>
-    </div>
-  </div>
+  <p> My current research focuses on the fascinating intersection of mathematics and biology, exploring how mathematical principles can unravel complexities within biological systems. This interdisciplinary approach seeks to bridge the gap between abstract mathematical theories and tangible biological phenomena, aiming to uncover new insights that could revolutionize our understanding of life and its underlying mechanisms.</p>
 
-<div class="container right">
-    <div class="content">
-      <h2>2020 - 2021 </h2>
-       <p>Covid-19 and Travel </p>
-	<p>Operation Research </p>
-	
-    </div>
-  </div>
+<p>In the past, my interests have spanned a diverse array of fields, including but not limited to:
 
-<div class="container left">
-    <div class="content">
-      <h2>Class Projects </h2>
-      <p>Applied PDE Project </p>
-       <p>Numerical Analysis II  Project</p>
-       <p>PDE Schroedinger Project  </p>
-    </div>
-  </div>
+<ul>
+  <li><b>Deep Learning:</b> Investigating the capabilities and applications of deep neural networks in modeling complex patterns and making predictions from large datasets.</li>
 
-</div>
+
+  <li><b>Reinforcement Learning:</b> Exploring how agents can learn from interactions with their environment to achieve specific goals.</li>
+
+ <li><b>Experimental Physics:</b> Engaged in hands-on laboratory experiments to probe the fundamental principles of physics, complemented by rigorous mathematical modeling to interpret experimental data and predict physical phenomena.</li>
+  <li><b>Operations Research:</b>  
+Applying mathematical models and analytical methods to make better decisions and solve problems in business, engineering, and other domains.</li>
+</ul>  
+
+</p>
+
+<p> For a deeper dive into my research, including specific projects, publication, and collaborations, <a href="/Users/jacobmantooth/Desktop/websitesicons/Jacob_CVweb.pdf" download>click here</a>.</p>
+
+
+
 </div>
 
 <script>
