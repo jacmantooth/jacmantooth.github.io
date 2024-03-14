@@ -2,14 +2,15 @@
 <html>
 <head>
 
-<style>
-    ul li { margin-bottom: 10px; }
-</style>
 
 
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+
+ul li { margin-bottom: 10px; }
+
 body {font-size: 16px; font-family: 'verdana';}
 
 /* Style the tab */
@@ -49,6 +50,8 @@ body {font-size: 16px; font-family: 'verdana';}
   border: 1px solid #ccc;
   border-top: none;
 }
+
+
 .centerfig {
   text-align: center;
 }
@@ -94,72 +97,81 @@ justify-content: center;
         height: auto; /* Maintain aspect ratio */
     }
 
-@media (max-width: 768px) {
-        .container > div {
-            max-width: 80vw; /* Adjust max-width for smaller screens */
-        }
-
-
-.containerright {
-        display: flex; /* Use flexbox to lay out children side by side */
-	justify-content: center;
-        align-items: center; /* Align items at the start of the cross axis */
-    }
-    .text {
-        margin-right: 20px; /* Space between the image and the text */
-    }
-    figure {
-        margin: 0; /* Remove default margin from the figure element */
-    }
-
-.containerright > div {
-        flex: 1; /* Each child div will take equal space */
-
-        max-width: 50vw; /* Maximum width for each child div */
-    }
-
-.containerright img {
-        max-width: 100%; /* Make image responsive within its container */
-	
-        height: auto; /* Maintain aspect ratio */
-    }
-
-@media (max-width: 768px) {
-        .container > div {
-            max-width: 80vw; /* Adjust max-width for smaller screens */
-        }
 
 .timeline {
   position: relative;
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
+  padding: 40px 20px;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
-  background-color: white;
+  width: 2px;
+  background-color: #000;
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -3px;
+  margin-left: -1px;
 }
 
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  margin-left: -10px;
+}
+
+.timeline-item.left .timeline-content {
+  left: 70%;
+}
+
+.timeline-item.right .timeline-content {
+  left: 20%;
+}
+
+.timeline-content {
+  position: relative;
+  left: 30px;
+}
+
+.timeline-date {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.timeline-description {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+        .container > div {
+            max-width: 80vw; /* Adjust max-width for smaller screens */
+        }
+
+
+Backline {
+            border: 0;
+            height: 2px; /* Adjust the height of the line */
+            background-color: black; /* Makes the line black */
+        }
 
 
 </style>
 
 
 </head>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Simulate click on the 'About Me' button
-    document.querySelector('.tablinks').click();
-});
-</script>
-
 
 <body>
 
@@ -167,7 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
 <div class="tab">
     <button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
     <button class="tablinks" onclick="openCity(event, 'Research')">Research</button>
-    <button class="tablinks" onclick="openCity(event, 'Projects')">Projects</button>
     <button class="tablinks" onclick="openCity(event, 'Links')">Links</button>
 </div>
 
@@ -175,66 +186,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div id="About Me" class="tabcontent">
 	<div class="centerfig">
-  	<img src = "https://github.com/jacmantooth/jacmantooth.github.io/blob/afbbb91c7641d60107bfc457612a8df0a3cbcffd/Iconsweb/face.jpg?raw=true" class="circle-image">
+  	<img src = "https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/face.jpg?raw=true" class="circle-image">
 	</div>
-<p> Hello, my name is Jacob Mantooth. I hail from Tijuana, Mexico, and later moved to Oklahoma. There, I pursued my education at East Central University, earning degrees in Physics and Mathematics, alongside minors in Computer Science and Chemistry. My time at university ignited a fervent passion for research and the pursuit of new knowledge.</p>
+<p style="line-height: 1.5;"> Hello, my name is Jacob Mantooth. I hail from Tijuana, Mexico, and later moved to Oklahoma. There, I pursued my education at East Central University, earning degrees in Physics and Mathematics, alongside minors in Computer Science and Chemistry. My time at university ignited a fervent passion for research and the pursuit of new knowledge.</p>
 
-<p> Currently, I am a first-year ACSM PhD student at the University of Notre Dame, under the mentorship of Dr. Lindsay. Our research is focused on the numerical simulation of cellular diffusion, investigating diffusion patterns both on circular and square domains, with an emphasis on predefined paths. My previous projects have spanned a variety of fields including Deep Learning, Reinforcement Learning, Operations Research, and experimental Physics. In terms of technical skills, I am proficient in several programming languages, including Python, R, C++, and Matlab. Beyond my academic and professional endeavors.</p>
+<p style="line-height: 1.5;"> Currently, I am a first-year ACSM PhD student at the University of Notre Dame, under the mentorship of Dr. Lindsay. Our research is focused on the numerical simulation of cellular diffusion, investigating diffusion patterns both on circular and square domains, with an emphasis on predefined paths. My previous projects have spanned a variety of fields including Deep Learning, Reinforcement Learning, Operations Research, and experimental Physics. In terms of technical skills, I am proficient in several programming languages, including Python, R, C++, and Matlab. Beyond my academic and professional endeavors.</p>
 
-<p>In addition to my academic and professional endeavors, I find immense solace and rejuvenation amidst the natural beauty of the great outdoors. To maintain a balanced and healthy lifestyle, I prioritize staying active through regular workouts, which serve as a cornerstone for both my physical and mental well-being. Moreover, I channel my creativity and technical skills into coding projects that are driven by my personal passions and interests. These projects are not just outlets for technical exploration but also a means to solve real-world problems, innovate, and contribute to the communities that I care about. </p>
+<p style="line-height: 1.5;">In addition to my academic and professional endeavors, I find immense solace and rejuvenation amidst the natural beauty of the great outdoors. To maintain a balanced and healthy lifestyle, I prioritize staying active through regular workouts, which serve as a cornerstone for both my physical and mental well-being. Moreover, I channel my creativity and technical skills into coding projects that are driven by my personal passions and interests. These projects are not just outlets for technical exploration but also a means to solve real-world problems, innovate, and contribute to the communities that I care about. </p>
 <p>
-
-
-<div class="container">
-   <div style="text-align: center;">
-       <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/afbbb91c7641d60107bfc457612a8df0a3cbcffd/Iconsweb/domiandirectionmmfpt.png?raw=true" >
-    	<p>Domian Direction MFPT</p>
-     </div>
-    <div class="text":>
-<ul>
-    <li> Radial Directional Guidance effects on diffusions on a circle and square domain</li>
-</ul> 
-     
-          
- 
-    </div>
-</div>
-
-
-<div class="container">
-    <div class="text":>
-        <ul>
-    <li> Explore Three Reinforcement Learning cases: continuous, single-discrete, and multi-discrete building a game for each</li>
-    <li> Compared Four Different Reinforcement methods on each case</li>
-</ul> 
-    </div>
-
-<div style="text-align: center;">
-       <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/afbbb91c7641d60107bfc457612a8df0a3cbcffd/Iconsweb/DoubleQtableper1000MSvE%20copy.png?raw=true" >
-    	<p>RL on Battleship</p>
-     </div>
-</div>
-
-
-
-<div class="container">
-    <div style="text-align: center;">
-    <video autoplay loop style="width: 100%;">
-      <source src="https://github.com/jacmantooth/jacmantooth.github.io/raw/afbbb91c7641d60107bfc457612a8df0a3cbcffd/Iconsweb/mtcarweb%20copy.mp4">
-    </video>
-    <p> RL vs OC on the Continuous Mountain Car Problem V0</p>
-  </div>
-<div class="text">
- <ul>
-    <li> Using the Hamilton-Jacobi-Bellman (HJB) equation to train an approximating neural network for the value function </li>
-    <li>Investigated the trade-off between data-driven RL methods and model-driven optimal control methods on the continuous mountain car problem</li>
-    <li> Compared three methods in solving the continuous mountain car problem </li>
-
-</ul> 
-    </div>
-</div>
-
-
 
 
 
@@ -245,17 +204,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <div id="Links" class="tabcontent">
-  <p>If you would like to contact me, please use any of the following links:</p>
 
+
+  <p>If you would like to contact me, please use any of the following links:</p>
+<div class="centerfig">
+	
   <a href="https://github.com/jacmantooth" target="_blank">
-    <img src="/Users/jacobmantooth/Desktop/websitesicons/githubicon.png" alt="GitHub" style="width: 80px; height: 80px;"></a>
+    <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/githubicon%20copy.png?raw=true" alt="GitHub" style="width: 100px; height: 100px;"></a>
 
 <!-- Closing tag for the GitHub link -->
   <a href="https://www.linkedin.com/in/jacob-mantooth-7b262321b/" target="_blank">
-    <img src="/Users/jacobmantooth/Desktop/websitesicons/linkedin.png" alt="LinkedIn" style="width: 80px; height: 80px;"></a>
+    <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/linkedin%20copy.png?raw=true" alt="LinkedIn" style="width: 100px; height: 100px;"></a>
 
 <a href="mailto:jmantoot@nd.edu" target="_blank"> <!-- Corrected mailto link -->
-    <img src="/Users/jacobmantooth/Desktop/websitesicons/emailicon2.png" alt="Email" style="width: 80px; height: 80px;"></a>
+    <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/emailicon%20copy.png?raw=true" alt="Email" style="width: 100px; height: 100px;"></a>
+</div>
 
 </div>
 
@@ -278,9 +241,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <H1>Current and Previous Research Endeavors</H1>
 
-  <p> My current research focuses on the fascinating intersection of mathematics and biology, exploring how mathematical principles can unravel complexities within biological systems. This interdisciplinary approach seeks to bridge the gap between abstract mathematical theories and tangible biological phenomena, aiming to uncover new insights that could revolutionize our understanding of life and its underlying mechanisms.</p>
+  <p style="line-height: 1.5;"> My current research focuses on the fascinating intersection of mathematics and biology, exploring how mathematical principles can unravel complexities within biological systems. This interdisciplinary approach seeks to bridge the gap between abstract mathematical theories and tangible biological phenomena, aiming to uncover new insights that could revolutionize our understanding of life and its underlying mechanisms.</p>
 
-<p>In the past, my interests have spanned a diverse array of fields, including but not limited to:
+<p style="line-height: 1.5;">In the past, my interests have spanned a diverse array of fields, including but not limited to:
 
 <ul>
   <li><b>Deep Learning:</b> Investigating the capabilities and applications of deep neural networks in modeling complex patterns and making predictions from large datasets.</li>
@@ -295,13 +258,88 @@ Applying mathematical models and analytical methods to make better decisions and
 
 </p>
 
-<p> For a deeper dive into my research, including specific projects, publication, and collaborations, <a href="/Users/jacobmantooth/Desktop/websitesicons/Jacob_CVweb.pdf" download>click here</a>.</p>
+<p style="line-height: 1.5;"> My interdisciplinary research thrives on a robust foundation in diverse coding languages, including Python, R, MATLAB, C++, and HTML. This proficiency enables me to conduct sophisticated simulations, in-depth analyses, and create dynamic visualizations of complex systems. These technical skills are essential, allowing for a seamless integration of theoretical exploration with practical application, and enhancing my ability to navigate and contribute to a broad spectrum of scientific inquiries. </p>
+
+<p style="line-height: 1.5;"> For a deeper dive into my research, including specific projects, publication, and collaborations, <a href="https://github.com/jacmantooth/jacmantooth.github.io/blob/f4425e12a8d79dd88be744db21c63f320cf6421c/Iconsweb/Jacob_CV%20copy.pdf" download>click here</a>.</p>
+<p><b>Past Work</b></p>
+<div class="container">
+   <div style="text-align: center;">
+       <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/domiandirectionmmfpt.png?raw=true" >
+    	<p>Domian Direction MFPT</p>
+     </div>
+    <div class="text":>
+<ul>
+    <li> Examining how radial directional guidance mechanisms influence particle movements and diffusion processes in circular and square domains</li>
+<li> Utilizing computational simulations to visualize and analyze how diffusing particles respond to radial directional cues within these constrained environments</li>
+<li> Comparing analytical solutions to numerical simulations in predicting the outcomes of radial directional guidance on diffusion, assessing accuracy and computational efficiency</li>
+</ul> 
+     
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="text":>
+        <ul>
+    <li> Delve into reinforcement learning via games tailored to continuous, single-discrete, and multi-discrete action spacesh</li>
+    <li> Assess four reinforcement learning strategies across each game, analyzing performance and adaptability</li>
+</ul> 
+    </div>
+
+<div style="text-align: center;">
+       <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/DoubleQtableper1000MSvE%20copy.png?raw=true" >
+    	<p>Domian Direction MFPT</p>
+     </div>
+</div>
+
+
+
+<div class="container">
+    <div style="text-align: center;">
+    <video autoplay loop style="width: 100%;">
+      <source src="https://github.com/jacmantooth/jacmantooth.github.io/raw/main/Iconsweb/mtcarweb%20copy.mp4" type="video/mp4">
+    </video>
+    <p> RL vs OC on the Continuous Mountain Car Problem V0</p>
+  </div>
+<div class="text">
+ <ul>
+    <li> Using the Hamilton-Jacobi-Bellman (HJB) equation to train an approximating neural network for the value function </li>
+    <li>Investigated the trade-off between data-driven RL methods and model-driven optimal control methods on the continuous mountain car problem</li>
+    <li> Compared three methods in solving the continuous mountain car problem </li>
+
+</ul> 
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="text":>
+        <ul>
+    <li> Demonstrated varied correlations between COVID-19 and travel patterns, revealing insightful relationships</li>
+    <li>  Engineered several dynamic models to visualize COVID-19's spread and its impact on U.S. travel, accessible online <a href="/Users/jacobmantooth/Desktop/websitesicons/scatter.html" download>click here</a></li>
+<li> Aimed to uncover the linkage between travel behaviors and COVID-19 trends to enhance outbreak forecasting accuracy</li>
+</ul> 
+    </div>
+
+<div style="text-align: center;">
+         <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/covidworkandtravelplot%20copy.png?raw=true" >
+    	<p>Covid and Travel</p>
+     </div>
+</div>
+
+ 
 
 
 
 </div>
 
 <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Simulate click on the 'About Me' button
+    document.querySelector('.tablinks').click();
+});
+
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
@@ -319,3 +357,4 @@ function openCity(evt, cityName) {
    
 </body>
 </html> 
+
