@@ -1,305 +1,287 @@
 <!DOCTYPE html>
 <html>
-<head>
+<meta charset= "UTF-8">
+<meta name = "viewport" content="width=device-width, initial scale = 1">
 
 
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+    body {
+    font-size: 16px; font-family: 'verdana';
+    background-color: hwb(0, 0%, 90%); /* Soft Blue */
+    color: #333; /* Dark grey for text for readability */
+    margin: 0;
+    padding: 0;
+    }
+    .w3-bar{
+        position: fixed;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: hwb(215 74% 2%); /* Adjusted to space-between for left-right alignment */
+        padding: 1% 1%;
+        
+    }
+    
+    .w3-bar-item {
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        margin-right: 20px; 
+        text-decoration: none;
+        transition: background-color 0.3s;
+        font-size: 150%;
+        
+        
+     }
+     .w3-bar a:hover {
+    background-color: #bdbdbd; /* Darker shade on hover for better UI feedback */
+    }
 
-ul li { margin-bottom: 10px; }
+    
+    .left-item { /* New class for the left item */
+        font-size: 150%;
+        margin-left: 5px;
+    }
 
-body {font-size: 16px; font-family: 'verdana';}
+    .about-section {
+        display: flex; /* Use flexbox to align title and text */
+        align-items: top; /* Aligns items vertically in the center */
+        margin-top: 20px; /* Adds some space above the section */
+    }
 
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
+    .about-title {
+        flex: 0 0 auto; /* Do not grow or shrink, but be based on content */
+        margin-right: 20px; /* Space between title and text */
+        margin-left: 20px;
+        margin-top: 20px;
+        font-size: 24px; /* Larger text for the title */
+        font-weight: bold; /* Makes the title bold */
+    }
 
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-  font-family: 'verdana';
-}
+    .about-text {
+        flex: 1; /* Allows the text to take up the remaining space */
+        text-align: left; /* Aligns the text to the left */
+    }
+    @media (max-width: 900px) {
+        .about-section {
+            flex-direction: column; /* Stack items vertically */
+            align-items: flex-start; /* Align items to the start (left) */
+        }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
+        .about-title {
+            margin-top: 0;
+            margin-right: 0; /* Remove right margin */
+            margin-left: 0;
+            margin-bottom: 5px; /* Add space below the title */
+        }
+    }
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-
-
-.centerfig {
-  text-align: center;
-}
- .circle-image {
-    border-radius: 50%; /* Makes the image round */
-    width: 150px; /* Adjust the size as needed */
-    height: 150px; /* Adjust the size as needed */
-    object-fit: cover; /* Ensures the image covers the space without stretching */
-  }
-
-.image-container {
-
-    display: flex; /* This will lay out the child elements (your images) in a row */
- /* This centers the images horizontally in the container */
-justify-content: center;
-    align-items: center; /* This centers the images vertically in the container */
-  }
+   
 
 
 
 
 .container {
-        display: flex; /* Use flexbox to lay out children side by side */
-	justify-content: center;
-        align-items: center; /* Align items at the start of the cross axis */
-    }
-    .text {
-        margin-left: 20px; /* Space between the image and the text */
-    }
-    figure {
-        margin: 0; /* Remove default margin from the figure element */
-    }
+    display: flex; /* Use flexbox to lay out children side by side */
+justify-content: center;
+    align-items: center; /* Align items at the start of the cross axis */
+}
+.image-container {
+
+display: flex; /* This will lay out the child elements (your images) in a row */
+/* This centers the images horizontally in the container */
+justify-content: center;
+align-items: center; /* This centers the images vertically in the container */
+}
+.text {
+    margin-left: 20px; /* Space between the image and the text */
+}
+figure {
+    margin: 0; /* Remove default margin from the figure element */
+}
 
 .container > div {
-        flex: 1; /* Each child div will take equal space */
+    flex: 1; /* Each child div will take equal space */
 
-        max-width: 50vw; /* Maximum width for each child div */
-    }
+    max-width: 50vw; /* Maximum width for each child div */
+}
 
 .container img {
-        max-width: 100%; /* Make image responsive within its container */
-	
-        height: auto; /* Maintain aspect ratio */
-    }
+    max-width: 100%; /* Make image responsive within its container */
 
+    height: auto; /* Maintain aspect ratio */
+}
+.container2 {
+    display: flex; /* Use flexbox to lay out children side by side */
+    justify-content: center;
+    align-items: center;  /* Align items at the start of the cross axis */
+}
+.image-container2 {
 
-.timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
+display: flex; /* This will lay out the child elements (your images) in a row */
+/* This centers the images horizontally in the container */
+justify-content: center;
+align-items: center; /* This centers the images vertically in the container */
+}
+.w3-bar a {
+    text-decoration: none; /* Removes underline from all links within .w3-bar */
+}
+.container2 > div {
+    flex: 1; /* Each child div will take equal space */
+
+    max-width: 50vw; /* Maximum width for each child div */
 }
 
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 2px;
-  background-color: #000;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -1px;
+.container2 img {
+    max-width: 100%; /* Make image responsive within its container */
+
+    height: auto; /* Maintain aspect ratio */
+}
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: hwb(215 74% 2%);;
+  margin-top: 20px;
+}
+.otherlinks {
+    display: flex; /* Enables Flexbox */
+    justify-content: center;
+    align-items: center; 
+    padding: 0px; /* Adds space inside the container */
+    
+}
+ul {
+    padding-left: 20px; /* Adjusts the padding on the left to align text nicely */
+    list-style-type: none; /* Removes the default bullet points */
+    max-width: 800px; /* Optional: constrains the list width for better readability */
+    margin: auto; /* Centers the list horizontally */
 }
 
-.timeline-item {
-  position: relative;
-  margin-bottom: 50px;
+li {
+    margin-bottom: 15px; /* Adds space between list items */
+    padding: 10px; /* Adds padding inside each list item */
+    background-color: #f9f9f9; /* Gives a subtle background color for better readability */
+    border-left: 4px solid #030303; /* Adds a left border for a modern look */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow for a subtle 3D effect */
+    line-height: 1.6; /* Improves line spacing */
 }
 
-.timeline-item::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background-color: #000;
-  border-radius: 50%;
-  top: 0;
-  left: 50%;
-  margin-left: -10px;
+.otherlinks img {
+    width: 50px; /* Sets a fixed width for each image */
+    height: auto; /* Maintans the aspect ratio of the images */
+    margin-left: 10px;}
+
+
+
+    .centerfig {
+  text-align: center;
+ 
 }
-
-.timeline-item.left .timeline-content {
-  left: 70%;
-}
-
-.timeline-item.right .timeline-content {
-  left: 20%;
-}
-
-.timeline-content {
-  position: relative;
-  left: 30px;
-}
-
-.timeline-date {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.timeline-description {
-  margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-        .container > div {
-            max-width: 80vw; /* Adjust max-width for smaller screens */
-        }
-
-
-Backline {
-            border: 0;
-            height: 2px; /* Adjust the height of the line */
-            background-color: black; /* Makes the line black */
-        }
-
-
+ .circle-image {
+    margin-top: 80px;
+    border-radius: 50%; /* Makes the image round */
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    object-fit: cover; /* Ensures the image covers the space without stretching */
+  }
+.introhome{text-align: center;}
+.spacer {
+    margin-top:30px; /* Adjust the value to increase or decrease the space */
+  }
 </style>
-
-
-</head>
 
 <body>
 
 
-<div class="tab">
-    <button class="tablinks" onclick="openCity(event, 'About Me')">About Me</button>
-    <button class="tablinks" onclick="openCity(event, 'Research')">Research</button>
-    <button class="tablinks" onclick="openCity(event, 'Links')">Links</button>
-</div>
-
-
-
-<div id="About Me" class="tabcontent">
-	<div class="centerfig">
-  	<img src = "https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/face.jpg?raw=true" class="circle-image">
-	</div>
-<p style="line-height: 1.5;"> Hello, my name is Jacob Mantooth. I hail from Tijuana, Mexico, and later moved to Oklahoma. There, I pursued my education at East Central University, earning degrees in Physics and Mathematics, alongside minors in Computer Science and Chemistry. My time at university ignited a fervent passion for research and the pursuit of new knowledge.</p>
-
-<p style="line-height: 1.5;"> Currently, I am a first-year ACSM PhD student at the University of Notre Dame, under the mentorship of Dr. Lindsay. Our research is focused on the numerical simulation of cellular diffusion, investigating diffusion patterns both on circular and square domains, with an emphasis on predefined paths. My previous projects have spanned a variety of fields including Deep Learning, Reinforcement Learning, Operations Research, and experimental Physics. In terms of technical skills, I am proficient in several programming languages, including Python, R, C++, and Matlab. Beyond my academic and professional endeavors.</p>
-
-<p style="line-height: 1.5;">In addition to my academic and professional endeavors, I find immense solace and rejuvenation amidst the natural beauty of the great outdoors. To maintain a balanced and healthy lifestyle, I prioritize staying active through regular workouts, which serve as a cornerstone for both my physical and mental well-being. Moreover, I channel my creativity and technical skills into coding projects that are driven by my personal passions and interests. These projects are not just outlets for technical exploration but also a means to solve real-world problems, innovate, and contribute to the communities that I care about. </p>
-<p>
-
-
-
-
-
-
-</div>
-
-
-<div id="Links" class="tabcontent">
-
-
-  <p>If you would like to contact me, please use any of the following links:</p>
+<nav class="w3-bar">
+    <span class="w3-bar-item left-item">Jacob Mantooth</span>
+    <div> <!-- New container for right-aligned items -->
+        <a href="#Home" class="w3-button w3-bar-item">Home</a>
+        <a href="#AboutMe" class="w3-button w3-bar-item">About Me</a>
+        <a href="#Research" class="w3-button w3-bar-item">Research</a>
+        <a href="Iconsweb/Jacob_CV%20copy.pdf" class="w3-button w3-bar-item" target="_blank">CV</a>
+        <a href="#Contact" class="w3-button w3-bar-item">Contact</a>
+    </div>
+</nav>
+<div id="Home">
 <div class="centerfig">
-	
-  <a href="https://github.com/jacmantooth" target="_blank">
-    <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/githubicon%20copy.png?raw=true" alt="GitHub" style="width: 100px; height: 100px;"></a>
-
-<!-- Closing tag for the GitHub link -->
-  <a href="https://www.linkedin.com/in/jacob-mantooth-7b262321b/" target="_blank">
-    <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/linkedin%20copy.png?raw=true" alt="LinkedIn" style="width: 100px; height: 100px;"></a>
-
-<a href="mailto:jmantoot@nd.edu" target="_blank"> <!-- Corrected mailto link -->
-    <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/emailicon%20copy.png?raw=true" alt="Email" style="width: 100px; height: 100px;"></a>
+    <img src = "https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/face.jpg?raw=true" class="circle-image">
+</div>
+<div class="introhome">
+<h1>Welcome to My Website!</h1>
+</div>
+<p>Hi, I'm Jacob Mantooth.</p>
+<p>Thank you for visiting my personal site. Here you'll find samples of my work, insights into my professional journey, and ways to connect with me. I'm excited to share my projects and ideas with you.</p>
 </div>
 
+<div class="spacer"></div>
+
+<div id="AboutMe">
+<section class="about-section">
+    <div class="about-title">About Me</div>
+    <div class="about-text">
+        <p style="line-height: 1.5;"> I was originally from Tijuana, Mexico, before moving to Oklahoma at a young age. There, I embarked on my educational journey at East Central University, where I earned degrees in Physics and Mathematics, with minors in Computer Science and Chemistry. My university experience ignited a fervent passion for research and the relentless pursuit of knowledge.</p>
+
+        <p style="line-height: 1.5;"> Currently, I am a second-year ACSM PhD student at the University of Notre Dame, working under the mentorship of Dr. Lindsay. We focus on numerical simulations of cellular diffusion, investigating diffusion patterns in both circular and square domains, with a particular emphasis on predefined paths. My previous projects have spanned a variety of fields, including Deep Learning, Reinforcement Learning, Operations Research, and Experimental Physics. In terms of technical skills, I am proficient in several programming languages, including Python, R, C++, and Matlab.</p>
+        
+        <p style="line-height: 1.5;">In addition to my academic and professional endeavors, I enjoy the great outdoors and prioritize maintaining a balanced and healthy lifestyle. Regular workouts are essential to both my physical and mental well-being. Beyond fitness, I channel my creativity and technical skills into coding projects driven by my personal passions and interests. These projects not only provide outlets for technical exploration but also serve as means to solve real-world problems, innovate, and contribute to the communities I care about.</p>
+    </div>
+</section>
 </div>
 
 
 
-<div id="Projects" class="tabcontent">
-  <p>Past and Present Coding Projects</p>
-  <p> languages that I have used in the past include: C++, Python, R, Matlab, HTML, Mathematica, Git, and PKL.<p>
-<p> Battle Ship using reinforcement learning<p> 
-<p> Designing/Building a web site that breaks down covid cases by states<p>
-<p> Comparing RL to OC Methods on the Continuous Mountain Car Problem<p>
-<p> MINST imagine recognition<p>
-</div>
-
-
-
-
-
-<div id="Research" class="tabcontent">
-
-<H1>Current and Previous Research Endeavors</H1>
-
-  <p style="line-height: 1.5;"> My current research focuses on the fascinating intersection of mathematics and biology, exploring how mathematical principles can unravel complexities within biological systems. This interdisciplinary approach seeks to bridge the gap between abstract mathematical theories and tangible biological phenomena, aiming to uncover new insights that could revolutionize our understanding of life and its underlying mechanisms.</p>
-
+<div id="Research">
+<H1>Current/Previous Research Endeavors</H1>
+<p style="line-height: 1.5;"> My current research focuses on the fascinating intersection of mathematics and biology, exploring how mathematical principles can unravel complexities within biological systems. This interdisciplinary approach seeks to bridge the gap between abstract mathematical theories and tangible biological phenomena, aiming to uncover new insights that could revolutionize our understanding of life and its underlying mechanisms.</p>
 <p style="line-height: 1.5;">In the past, my interests have spanned a diverse array of fields, including but not limited to:
 
-<ul>
-  <li><b>Deep Learning:</b> Investigating the capabilities and applications of deep neural networks in modeling complex patterns and making predictions from large datasets.</li>
+    <ul>
+        <li><b>Deep Learning:</b> Investigating the capabilities and applications of deep neural networks in modeling complex patterns and making predictions from large datasets.</li>
+        <li><b>Reinforcement Learning:</b> Exploring how agents can learn from interactions with their environment to achieve specific goals.</li>
+        <li><b>Experimental Physics:</b> Engaged in hands-on laboratory experiments to probe the fundamental principles of physics, complemented by rigorous mathematical modeling to interpret experimental data and predict physical phenomena.</li>
+        <li><b>Operations Research:</b> Applying mathematical models and analytical methods to make better decisions and solve problems in business, engineering, and other domains.</li>
+    </ul>
+    
+    </p>
+    <p style="line-height: 1.5;"> My interdisciplinary research thrives on a robust foundation in diverse coding languages, including Python, R, MATLAB, C++, and HTML. This proficiency enables me to conduct sophisticated simulations, in-depth analyses, and create dynamic visualizations of complex systems. These technical skills are essential, allowing for a seamless integration of theoretical exploration with practical application, and enhancing my ability to navigate and contribute to a broad spectrum of scientific inquiries. </p>
+
+    <p style="line-height: 1.5;"> For a deeper dive into my research, including specific projects, publication, and collaborations, <a href="Iconsweb/Jacob_CV%20copy.pdf" target="_blank">click here</a>.</p>
 
 
-  <li><b>Reinforcement Learning:</b> Exploring how agents can learn from interactions with their environment to achieve specific goals.</li>
-
- <li><b>Experimental Physics:</b> Engaged in hands-on laboratory experiments to probe the fundamental principles of physics, complemented by rigorous mathematical modeling to interpret experimental data and predict physical phenomena.</li>
-  <li><b>Operations Research:</b>  
-Applying mathematical models and analytical methods to make better decisions and solve problems in business, engineering, and other domains.</li>
-</ul>  
-
-</p>
-
-<p style="line-height: 1.5;"> My interdisciplinary research thrives on a robust foundation in diverse coding languages, including Python, R, MATLAB, C++, and HTML. This proficiency enables me to conduct sophisticated simulations, in-depth analyses, and create dynamic visualizations of complex systems. These technical skills are essential, allowing for a seamless integration of theoretical exploration with practical application, and enhancing my ability to navigate and contribute to a broad spectrum of scientific inquiries. </p>
-
-<p style="line-height: 1.5;"> For a deeper dive into my research, including specific projects, publication, and collaborations, <a href="Iconsweb/Jacob_CV%20copy.pdf" target="_blank">click here</a>.</p>
-<p><b>Past Work</b></p>
 <div class="container">
-   <div style="text-align: center;">
-       <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/domiandirectionmmfpt.png?raw=true" >
-    	<p>Domian Direction MFPT</p>
-     </div>
-    <div class="text":>
-<ul>
-    <li> Examining how radial directional guidance mechanisms influence particle movements and diffusion processes in circular and square domains</li>
-<li> Utilizing computational simulations to visualize and analyze how diffusing particles respond to radial directional cues within these constrained environments</li>
-<li> Comparing analytical solutions to numerical simulations in predicting the outcomes of radial directional guidance on diffusion, assessing accuracy and computational efficiency</li>
-<li>Link to the paper can be found here  <a href="https://arxiv.org/abs/2404.00400" target="_blank">click here</a> </li>
+    <div style="text-align: center;">
+        <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/domiandirectionmmfpt.png?raw=true" >
+         <p>Domian Direction MFPT</p>
+      </div>
+     <div class="text":>
+ <ul>
+     <li> Develop a general theory for the mean first passage time (MFPT) for velocity jump processes.</li>
+ <li> Utilizing computational simulations to visualize and analyze how diffusing particles respond to radial directional cues within these constrained environments</li>
+ <li> Comparing analytical solutions to numerical simulations in predicting the outcomes of radial directional guidance on diffusion, assessing accuracy and computational efficiency</li>
+ <li>Link to the paper can be found here  <a href="https://arxiv.org/abs/2404.00400" target="_blank">click here</a> </li>
 </ul> 
-     
-    </div>
+</div>
 </div>
 
-
-<div class="container">
+ <div class="container2">
     <div class="text":>
         <ul>
-    <li> Delve into reinforcement learning via games tailored to continuous, single-discrete, and multi-discrete action spacesh</li>
+    <li> Delve into reinforcement learning via games tailored to continuous, single-discrete, and multi-discrete action space</li>
     <li> Assess four reinforcement learning strategies across each game, analyzing performance and adaptability</li>
 </ul> 
     </div>
 
 <div style="text-align: center;">
-       <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/DoubleQtableper1000MSvE%20copy.png?raw=true" >
-    	<p>RL on Battleship </p>
+    <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/DoubleQtableper1000MSvE%20copy.png?raw=true" >
+    	<p>Deep learning on BattleShip</p>
      </div>
 </div>
-
-
-
 <div class="container">
     <div style="text-align: center;">
-    <video autoplay loop style="width: 100%;">
-      <source src="https://github.com/jacmantooth/jacmantooth.github.io/raw/main/Iconsweb/mtcarweb%20copy.mp4" type="video/mp4">
-    </video>
+        <video autoplay loop style="width: 100%;">
+            <source src="https://github.com/jacmantooth/jacmantooth.github.io/raw/main/Iconsweb/mtcarweb%20copy.mp4" type="video/mp4">
+          </video>
     <p> RL vs OC on the Continuous Mountain Car Problem V0</p>
   </div>
 <div class="text">
@@ -309,11 +291,9 @@ Applying mathematical models and analytical methods to make better decisions and
     <li> Compared three methods in solving the continuous mountain car problem </li>
 
 </ul> 
-    </div>
 </div>
-
-
-<div class="container">
+</div>
+<div class="container2">
     <div class="text":>
         <ul>
     <li> Demonstrated varied correlations between COVID-19 and travel patterns, revealing insightful relationships</li>
@@ -323,39 +303,29 @@ Applying mathematical models and analytical methods to make better decisions and
     </div>
 
 <div style="text-align: center;">
-         <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/covidworkandtravelplot%20copy.png?raw=true" >
+    <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/covidworkandtravelplot%20copy.png?raw=true" >
     	<p>Covid and Travel</p>
-     </div>
+</div>
 </div>
 
- 
-
-
-
 </div>
-
-<script>
-
-document.addEventListener('DOMContentLoaded', function() {
-    // Simulate click on the 'About Me' button
-    document.querySelector('.tablinks').click();
-});
-
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
-   
 </body>
-</html> 
+
+<div id="Contact">
+<div class="footer">
+    <div class="otherlinks">
+        
+        <a href="https://github.com/jacmantooth" target="_blank">
+        <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/github-square.png?raw=true" alt="Image 1"></a>
+            
+        <a href="https://www.instagram.com/jacobcmantooth/" target="_blank">
+        <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/rounded-instagram.png?raw=true" alt="Image 2"></a>
+    
+        <a href="https://www.linkedin.com/in/jacob-mantooth-7b262321b/" target="_blank">
+        <img src="https://github.com/jacmantooth/jacmantooth.github.io/blob/main/Iconsweb/rounded-linkedin.png?raw=true" alt="Image 3"></a>
+    </div>
+    <p>© 2024 Jacob Mantooth. All rights reserved.</p>
+</div>
+</div>
+</html>
 
