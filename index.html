@@ -76,7 +76,39 @@
         }
     }
 
-   
+   @media (max-width: 414px) {
+    .about-section {
+            flex-direction: column; /* Stack items vertically */
+            align-items: flex-start; /* Align items to the start (left) */
+        }
+
+        .about-title {
+            margin-top: 0;
+            margin-right: 0; /* Remove right margin */
+            margin-left: 0;
+            margin-bottom: 5px; /* Add space below the title */
+		
+        }
+	.w3-bar-item {
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        margin-right: 20px; 
+        text-decoration: none;
+        transition: background-color 0.3s;
+        font-size: 70%;
+     }
+.left-item { /* New class for the left item */
+        font-size: 70%;
+        margin-left: 5px;
+    }
+.circle-image {
+    margin-top: 100px;
+    border-radius: 50%; /* Makes the image round */
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Adjust the size as needed */
+    object-fit: cover; /* Ensures the image covers the space without stretching */
+  }
+}
 
 
 
