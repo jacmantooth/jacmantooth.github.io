@@ -7,7 +7,7 @@
 
 <style>
     body {
-    font-size: 16px; font-family: 'verdana';
+    font-size: 80%; font-family: 'verdana';
     background-color: hwb(0, 0%, 90%); /* Soft Blue */
     color: #333; /* Dark grey for text for readability */
     margin: 0;
@@ -64,6 +64,14 @@
         text-align: left; /* Aligns the text to the left */
     }
     @media (max-width: 900px) {
+	    body {
+            font-size: 80%; 
+        font-family: 'verdana';
+        background-color: hwb(0, 0%, 90%); /* Soft Blue */
+        color: #333; /* Dark grey for text for readability */
+        margin: 0;
+        padding: 0;
+    }
         .about-section {
             flex-direction: column; /* Stack items vertically */
             align-items: flex-start; /* Align items to the start (left) */
@@ -75,6 +83,20 @@
             margin-left: 0;
             margin-bottom: 5px; /* Add space below the title */
         }
+	    .w3-bar-item {
+        font-weight: 500; 
+        letter-spacing: 0.01px;
+        margin-right: 10px; 
+        text-decoration: none;
+        transition: background-color 0.3s;
+        font-size: 100%;
+        
+        
+     }
+     .text {
+        font-size: 60%;  /* Space between the image and the text */
+   
+}
     }
 
    @media (max-width: 414px) {
@@ -102,13 +124,7 @@
         font-size: 70%;
         margin-left: 5px;
     }
-.circle-image {
-    margin-top: 100px;
-    border-radius: 50%; /* Makes the image round */
-    width: 150px; /* Adjust the size as needed */
-    height: 150px; /* Adjust the size as needed */
-    object-fit: cover; /* Ensures the image covers the space without stretching */
-  }
+
 }
 
 
@@ -211,10 +227,10 @@ li {
  
 }
  .circle-image {
-    margin-top: 80px;
+    margin-top: 5%;
     border-radius: 50%; /* Makes the image round */
-    width: 150px; /* Adjust the size as needed */
-    height: 150px; /* Adjust the size as needed */
+    width: 120px; /* Adjust the size as needed */
+    height: 120px; /* Adjust the size as needed */
     object-fit: cover; /* Ensures the image covers the space without stretching */
   }
 .introhome{text-align: center;}
